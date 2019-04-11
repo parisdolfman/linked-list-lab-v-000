@@ -54,3 +54,14 @@ function insertNodeAt(index, newNodeAddress, linkedList, collection) {
   let newNode = collection[newNodeAddress]
   newNode.next = subsequentNodeAddress
 }
+
+function deleteNodeAt(index, linkedList, collection) {
+  let previousNode
+  let currentNode - headNode(linkedList, collection)
+  for (let counter = 0; counter < index; counter++) {
+    previousNode = currentNode
+    currentNode = next(currentNode, collection)
+  }
+  previousNode.next = currentNode.next
+}
+
